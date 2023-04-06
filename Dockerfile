@@ -1,8 +1,8 @@
 FROM ubuntu:jammy
 
 RUN set -eux; \
-	groupadd --gid 999 --system mongodb; \
-	useradd --uid 999 --system --gid mongodb --home-dir /data/db mongodb; \
+	groupadd --gid 1001 --system mongodb; \
+	useradd --uid 1001 --system --gid mongodb --home-dir /data/db mongodb; \
 	mkdir -p /data/db /data/configdb; \
 	chown -R mongodb:mongodb /data/db /data/configdb
 
